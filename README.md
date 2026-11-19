@@ -6,7 +6,7 @@ Sitio web estático (HTML + CSS + JS, sin dependencias) para vender carros eléc
 Abre `index.html` en el navegador, o publícala en GitHub Pages, Netlify o Vercel.
 
 ## Personalizar
-- **Productos y precios:** edita la lista `PRODUCTS` en `js/main.js` (nombre, categoría, precio, precio anterior, etiqueta, edad, foto).
-- **Fotos:** agrega tus imágenes en `assets/` y cambia el campo `img` de cada producto.
-- **WhatsApp:** cambia `WHATSAPP` en `js/main.js` y el enlace `wa.me/...` en `index.html`.
+- **Productos:** edita `js/productos.js` (allí está explicado cada campo). Cada producto tiene su página en `producto.html?id=...`.
+- **Fotos:** van en `assets/productos/` y se listan en el campo `fotos` de cada producto.
+- **WhatsApp:** cambia `WHATSAPP` en `js/productos.js` (se usa en toda la página).
 - **Colores:** variables al inicio de `css/styles.css` (tomadas del logo: pizarra, oliva, mostaza y terracota).
