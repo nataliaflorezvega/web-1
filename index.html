@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Filü · Carros montables para niños</title>
+  <meta name="description" content="Filü: carros eléctricos montables con control remoto para niños. Buggies, camionetas y motos con envío a todo el país." />
+  <link rel="icon" href="assets/logo-filu.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Barra de anuncios -->
+  <div class="announce">
+    <div class="announce__track">
+      <span>🚚 Envío gratis a todo el país</span>
+      <span>💳 Paga hasta en 12 cuotas</span>
+      <span>🛡️ 6 meses de garantía en todos los carros</span>
+      <span>🎁 Control remoto para papás incluido</span>
+      <span aria-hidden="true">🚚 Envío gratis a todo el país</span>
+      <span aria-hidden="true">💳 Paga hasta en 12 cuotas</span>
+      <span aria-hidden="true">🛡️ 6 meses de garantía en todos los carros</span>
+      <span aria-hidden="true">🎁 Control remoto para papás incluido</span>
+    </div>
+  </div>
+
+  <!-- Encabezado -->
+  <header class="header">
+    <div class="container header__inner">
+      <button class="icon-btn menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+        <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <a href="#" class="logo"><img src="assets/logo-filu.png" alt="Filü" /></a>
+      <nav class="nav" aria-label="Principal">
+        <a href="#catalogo">Catálogo</a>
+        <a href="#categorias">Categorías</a>
+        <a href="#por-que">¿Por qué Filü?</a>
+        <a href="#preguntas">Preguntas</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <div class="header__actions">
+        <button class="icon-btn" aria-label="Buscar" data-open-search>
+          <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="m20 20-4.2-4.2"/></svg>
+        </button>
+        <button class="icon-btn cart-btn" aria-label="Abrir carrito" data-open-cart>
+          <svg viewBox="0 0 24 24"><path d="M3 4h2.2l2.3 11h10.8l2-8H6.4"/><circle cx="9.5" cy="19.5" r="1.4"/><circle cx="17" cy="19.5" r="1.4"/></svg>
+          <span class="cart-count" data-cart-count>0</span>
+        </button>
+      </div>
+    </div>
+    <div class="search-bar" data-search>
+      <div class="container">
+        <input type="search" placeholder="¿Qué carrito buscas? Ej: buggy, moto, camioneta…" data-search-input />
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <svg class="doodle doodle--cloud c1" viewBox="0 0 120 60"><path d="M20 50c-11 0-14-14-4-18 0-12 15-16 22-8 4-12 24-14 28 0 10-6 24 0 22 12 12 0 12 14 0 14z"/></svg>
+      <svg class="doodle doodle--cloud c2" viewBox="0 0 120 60"><path d="M20 50c-11 0-14-14-4-18 0-12 15-16 22-8 4-12 24-14 28 0 10-6 24 0 22 12 12 0 12 14 0 14z"/></svg>
+      <svg class="doodle doodle--cloud c3" viewBox="0 0 120 60"><path d="M20 50c-11 0-14-14-4-18 0-12 15-16 22-8 4-12 24-14 28 0 10-6 24 0 22 12 12 0 12 14 0 14z"/></svg>
+
+      <div class="container hero__inner">
+        <div class="hero__text">
+          <span class="pill">¡Nueva colección 2026!</span>
+          <h1>Aventuras sobre ruedas <span class="hl">para los más pequeños</span></h1>
+          <p>Carros eléctricos montables con control remoto para que tus hijos manejen solos… o tú los guíes desde lejos. Seguros, resistentes y llenos de diversión.</p>
+          <div class="hero__cta">
+            <a href="#catalogo" class="btn btn--dark">Ver carritos</a>
+            <a href="#por-que" class="btn btn--ghost">¿Por qué Filü?</a>
+          </div>
+          <ul class="hero__stats">
+            <li><strong>+2.000</strong><span>familias felices</span></li>
+            <li><strong>4.9 ★</strong><span>calificación</span></li>
+            <li><strong>6 meses</strong><span>de garantía</span></li>
+          </ul>
+        </div>
+        <div class="hero__media">
+          <div class="hero__blob"></div>
+          <img src="assets/buggy-azul.webp" alt="Buggy eléctrico azul para niños" />
+          <span class="sticker sticker--price">Desde<br><strong>$1.299.000</strong></span>
+          <span class="sticker sticker--remote">📡 Control remoto 2.4G</span>
+        </div>
+      </div>
+
+      <!-- Ciudad dibujada -->
+      <svg class="hero__city" viewBox="0 0 1440 140" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 120h60V70h40v50h20V40h50v80h30V85h45v35h40V30l25-25 25 25v90h30V75h55v45h300V60h40V30h20v30h40v60h30V80h45v40h35V20l25-18 25 18v100h25V70h50v50h60V90h40v30h135"/>
+        <path d="M0 132h1440" />
+      </svg>
+    </section>
+
+    <!-- Categorías -->
+    <section class="section" id="categorias">
+      <div class="container">
+        <div class="section__head">
+          <h2>Elige su próxima <span class="u u--olive">aventura</span></h2>
+          <p>Encuentra el carro perfecto según la edad y el estilo de tu peque.</p>
+        </div>
+        <div class="cats">
+          <a href="#catalogo" class="cat cat--mustard" data-filter-link="buggy">
+            <span class="cat__icon">🏁</span><h3>Buggies</h3><p>Todo terreno, 4x4</p>
+          </a>
+          <a href="#catalogo" class="cat cat--terra" data-filter-link="camioneta">
+            <span class="cat__icon">🚙</span><h3>Camionetas</h3><p>Para 1 y 2 puestos</p>
+          </a>
+          <a href="#catalogo" class="cat cat--olive" data-filter-link="moto">
+            <span class="cat__icon">🏍️</span><h3>Motos</h3><p>Con rueditas de apoyo</p>
+          </a>
+          <a href="#catalogo" class="cat cat--slate" data-filter-link="bebe">
+            <span class="cat__icon">🍼</span><h3>Primeros pasos</h3><p>De 1 a 3 años</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Catálogo -->
+    <section class="section section--cream" id="catalogo">
+      <div class="container">
+        <div class="section__head">
+          <h2>Los más <span class="u u--terra">queridos</span></h2>
+          <p>Todos incluyen control remoto parental, cinturón de seguridad, luces LED y música.</p>
+        </div>
+        <div class="filters" role="tablist">
+          <button class="chip is-active" data-filter="todos">Todos</button>
+          <button class="chip" data-filter="buggy">Buggies</button>
+          <button class="chip" data-filter="camioneta">Camionetas</button>
+          <button class="chip" data-filter="moto">Motos</button>
+          <button class="chip" data-filter="bebe">Primeros pasos</button>
+        </div>
+        <div class="products" data-products></div>
+        <p class="empty" data-empty hidden>No encontramos carritos con esa búsqueda 🙈</p>
+      </div>
+    </section>
+
+    <!-- Por qué Filü -->
+    <section class="section" id="por-que">
+      <div class="container">
+        <div class="section__head">
+          <h2>¿Por qué <span class="u u--mustard">Filü</span>?</h2>
+          <p>Porque la infancia se vive mejor manejando sus propias aventuras.</p>
+        </div>
+        <div class="features">
+          <article class="feature">
+            <div class="feature__icon bg-slate">📡</div>
+            <h3>Control para papás</h3>
+            <p>Toma el control desde lejos con el remoto 2.4G mientras aprenden a manejar.</p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon bg-olive">🛡️</div>
+            <h3>Seguridad primero</h3>
+            <p>Cinturón, arranque suave y velocidad limitada. Materiales libres de tóxicos.</p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon bg-mustard">🔋</div>
+            <h3>Batería de larga duración</h3>
+            <p>Hasta 2 horas de juego continuo con cada carga completa.</p>
+          </article>
+          <article class="feature">
+            <div class="feature__icon bg-terra">🚚</div>
+            <h3>Llega armado</h3>
+            <p>Envío gratis y te lo entregamos listo para estrenar. ¡Solo enciende y a rodar!</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Banner promocional -->
+    <section class="promo">
+      <div class="container promo__inner">
+        <div>
+          <span class="pill pill--light">Solo esta semana</span>
+          <h2>10% OFF en tu primer carrito</h2>
+          <p>Usa el código <strong class="code">FILU10</strong> al finalizar tu compra por WhatsApp.</p>
+        </div>
+        <a href="#catalogo" class="btn btn--mustard">¡Lo quiero!</a>
+      </div>
+      <svg class="promo__road" viewBox="0 0 400 200" aria-hidden="true"><path d="M-20 180C80 170 60 90 160 90s120-80 260-70"/><path d="M-20 200C100 190 90 120 180 120s140-70 260-60"/></svg>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <h2>Lo que dicen las <span class="u u--olive">familias</span></h2>
+        </div>
+        <div class="reviews">
+          <figure class="review">
+            <div class="stars">★★★★★</div>
+            <blockquote>“Mi hijo no se quiere bajar del buggy. Llegó armado y el control remoto nos da mucha tranquilidad.”</blockquote>
+            <figcaption><span class="avatar bg-terra">C</span>Carolina M. · Medellín</figcaption>
+          </figure>
+          <figure class="review">
+            <div class="stars">★★★★★</div>
+            <blockquote>“Excelente calidad, la batería dura muchísimo. La atención por WhatsApp fue súper rápida.”</blockquote>
+            <figcaption><span class="avatar bg-olive">A</span>Andrés P. · Bogotá</figcaption>
+          </figure>
+          <figure class="review">
+            <div class="stars">★★★★★</div>
+            <blockquote>“El mejor regalo de cumpleaños. Mis dos niñas caben juntas en la camioneta de dos puestos.”</blockquote>
+            <figcaption><span class="avatar bg-mustard">L</span>Laura G. · Cali</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- Preguntas frecuentes -->
+    <section class="section section--cream" id="preguntas">
+      <div class="container container--narrow">
+        <div class="section__head">
+          <h2>Preguntas <span class="u u--terra">frecuentes</span></h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>¿Desde qué edad pueden usarlo?</summary>
+            <p>Tenemos modelos desde 1 año (con control remoto para papás) hasta 8 años. En cada producto indicamos la edad recomendada.</p>
+          </details>
+          <details>
+            <summary>¿Cuánto tarda el envío?</summary>
+            <p>Entre 2 y 5 días hábiles en ciudades principales. El envío es gratis a todo el país.</p>
+          </details>
+          <details>
+            <summary>¿Cuánto dura la batería?</summary>
+            <p>Entre 1 y 2 horas de uso continuo según el modelo y el terreno. La carga completa tarda de 8 a 10 horas.</p>
+          </details>
+          <details>
+            <summary>¿Qué cubre la garantía?</summary>
+            <p>6 meses en motor, batería y partes eléctricas. Además tenemos repuestos y servicio técnico.</p>
+          </details>
+          <details>
+            <summary>¿Cómo puedo pagar?</summary>
+            <p>Tarjeta de crédito (hasta 12 cuotas), PSE, transferencia, Nequi o contra entrega en ciudades seleccionadas.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section newsletter">
+      <div class="container container--narrow">
+        <h2>Únete al club Filü 🏎️</h2>
+        <p>Recibe lanzamientos, descuentos exclusivos y tips de seguridad.</p>
+        <form class="newsletter__form" data-newsletter>
+          <input type="email" required placeholder="Tu correo electrónico" aria-label="Correo electrónico" />
+          <button class="btn btn--dark" type="submit">Suscribirme</button>
+        </form>
+        <p class="newsletter__ok" data-newsletter-ok hidden>¡Listo! Ya eres parte del club Filü 💛</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Pie de página -->
+  <footer class="footer" id="contacto">
+    <div class="footer__stripes" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    <div class="container footer__grid">
+      <div>
+        <img src="assets/logo-filu.png" alt="Filü" class="footer__logo" />
+        <p>Carros montables con control remoto para pequeños aventureros.</p>
+      </div>
+      <div>
+        <h4>Tienda</h4>
+        <a href="#catalogo">Catálogo</a>
+        <a href="#categorias">Categorías</a>
+        <a href="#preguntas">Preguntas frecuentes</a>
+      </div>
+      <div>
+        <h4>Ayuda</h4>
+        <a href="#">Envíos y entregas</a>
+        <a href="#">Garantía y repuestos</a>
+        <a href="#">Cambios y devoluciones</a>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <a href="https://wa.me/570000000000" target="_blank" rel="noopener">WhatsApp: +57 300 000 0000</a>
+        <a href="mailto:hola@filu.com">hola@filu.com</a>
+        <div class="socials">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="Facebook">FB</a>
+          <a href="#" aria-label="TikTok">TT</a>
+        </div>
+      </div>
+    </div>
+    <p class="footer__copy">© <span data-year></span> Filü. Hecho con 💛 para pequeños conductores.</p>
+  </footer>
+
+  <!-- Carrito -->
+  <div class="overlay" data-overlay></div>
+  <aside class="cart" data-cart aria-label="Carrito de compras">
+    <div class="cart__head">
+      <h3>Tu carrito</h3>
+      <button class="icon-btn" aria-label="Cerrar carrito" data-close-cart>
+        <svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="cart__items" data-cart-items></div>
+    <div class="cart__foot">
+      <div class="cart__total"><span>Total</span><strong data-cart-total>$0</strong></div>
+      <button class="btn btn--whatsapp btn--block" data-checkout>Finalizar pedido por WhatsApp</button>
+    </div>
+  </aside>
+
+  <!-- WhatsApp flotante -->
+  <a class="wa-float" href="https://wa.me/570000000000?text=Hola%20Fil%C3%BC%2C%20quiero%20informaci%C3%B3n%20de%20los%20carritos" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 32 32"><path fill="currentColor" d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3zm0 23.6c-2 0-4-.5-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.7 5 2.1.9 3 1 4 .8.7-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5-.1-.1-.3-.2-.6-.4z"/></svg>
+  </a>
+
+  <div class="toast" data-toast></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
