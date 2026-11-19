@@ -436,3 +436,7 @@ h1, h2, h3, h4 { font-family: var(--font-display); line-height: 1.1; margin: 0 0
 }
 .toast { visibility: hidden; }
 .toast.is-visible { visibility: visible; }
+
+/* Medios de pago en el pie */
+.pay { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .9rem; }
+.pay span { padding: .25em .7em; border-radius: 8px; background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.18); font-size: .78rem; font-weight: 700; }

@@ -24,7 +24,7 @@ function productCard(p) {
   const tags = [p.edad, p.puestos, p.bateria].filter(Boolean).map((t) => `<span class="tag">${esc(t)}</span>`).join("");
   const price = p.precio
     ? `<div class="product__price"><strong>${money(p.precio)}</strong>${p.precioAntes ? `<s>${money(p.precioAntes)}</s>` : ""}</div>
-       <p class="product__cuotas">o 12 cuotas de ${money(Math.round(p.precio / 12))}</p>`
+       <p class="product__cuotas">🚚 Envío gratis</p>`
     : `<div class="product__price"><strong class="consult">Consultar precio</strong></div>`;
   const action = p.precio
     ? `<button class="btn btn--terra" data-add="${p.id}">Agregar al carrito</button>`
@@ -108,7 +108,7 @@ if (detail) {
     ].filter(Boolean);
     const priceHtml = p.precio
       ? `<div class="pd__price"><strong>${money(p.precio)}</strong>${p.precioAntes ? `<s>${money(p.precioAntes)}</s>` : ""}</div>
-         <p class="pd__cuotas">o 12 cuotas de ${money(Math.round(p.precio / 12))}</p>`
+         <p class="pd__cuotas">🚚 Envío gratis a todo el país · Paga con tarjeta a cuotas, PSE, Nequi o Bre-B</p>`
       : `<div class="pd__price"><strong>Consultar precio</strong></div><p class="pd__cuotas">Escríbenos y te enviamos el precio y la disponibilidad.</p>`;
 
     detail.innerHTML = `
@@ -133,7 +133,7 @@ if (detail) {
             <a class="btn btn--whatsapp" data-wa-product target="_blank" rel="noopener">${p.precio ? "Comprar por WhatsApp" : "Consultar por WhatsApp"}</a>
           </div>
           <ul class="pd__trust">
-            <li>🚚 Envío a todo el país</li>
+            <li>🚚 Envío gratis con Servientrega</li>
             <li>📡 Control remoto para papás</li>
             <li>🛡️ Garantía Filü</li>
           </ul>
@@ -264,7 +264,7 @@ $("[data-checkout]").addEventListener("click", () => {
   if (!items.length) return toast("Tu carrito está vacío");
   const lines = items.map((i) => `• ${i.qty} x ${i.nombre} — ${money(i.precio * i.qty)}`);
   const total = items.reduce((s, i) => s + i.qty * i.precio, 0);
-  window.open(waLink(`¡Hola Filü! 👋 Quiero hacer este pedido:\n\n${lines.join("\n")}\n\nTotal: ${money(total)}`), "_blank", "noopener");
+  window.open(waLink(`¡Hola Filü! 👋 Quiero hacer este pedido:\n\n${lines.join("\n")}\n\nTotal: ${money(total)} (envío incluido)\n\nMi ciudad es: \nPrefiero pagar con: (link de pago / transferencia / Nequi / Bre-B)`), "_blank", "noopener");
 });
 
 // ---------- WhatsApp general ----------
