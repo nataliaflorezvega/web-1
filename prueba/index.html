@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <base href="../" />
+  <title>Filü · Versión de prueba</title>
+  <meta name="description" content="Versión de prueba del nuevo estilo de Filü." />
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="assets/logo-filu.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@500;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="prueba/v2.css" />
+</head>
+<body>
+  <!-- Filtros SVG: bordes "pintados a mano" -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <filter id="rough"><feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="3"/><feDisplacementMap in="SourceGraphic" scale="7"/></filter>
+    <filter id="rough-sm"><feTurbulence type="fractalNoise" baseFrequency="0.05" numOctaves="2" seed="8"/><feDisplacementMap in="SourceGraphic" scale="4"/></filter>
+  </svg>
+
+  <div class="topbar">
+    <p>Envío gratis a todo el país · Paga con tarjeta, PSE, Nequi o Bre-B</p>
+  </div>
+
+  <header class="header">
+    <div class="wrap header__in">
+      <a href="prueba/index.html" class="logo"><img src="assets/logo-filu.png" alt="Filü" /></a>
+      <nav class="nav">
+        <a href="catalogo.html?tipo=carro">Carros</a>
+        <a href="catalogo.html?tipo=moto">Motos</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#preguntas">Preguntas</a>
+      </nav>
+      <a class="btn btn--line btn--sm" data-wa href="#" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Portada -->
+    <section class="hero">
+      <div class="wrap hero__grid">
+        <figure class="hero__photo ph">
+          <img src="assets/productos/recortes/rodeo-1155-1.webp" alt="Rodeo 1155 4x4 Grande" />
+          <figcaption class="note">Aquí va tu foto principal de estilo de vida (un niño manejando su Filü)</figcaption>
+        </figure>
+
+        <div class="hero__cards">
+          <div class="stripes stripes--blue hero__title rough">
+            <h1>pequeños<br/>conductores,<br/><span>grandes aventuras.</span></h1>
+          </div>
+          <div class="paper hero__text lift">
+            <p>Carros y motos eléctricas montables para niños de 1 a 8 años. Con control remoto para papás, materiales resistentes y envío gratis a todo el país.</p>
+            <div class="hero__cta">
+              <a href="catalogo.html?tipo=carro" class="btn btn--solid">Ver carros</a>
+              <a href="catalogo.html?tipo=moto" class="btn btn--line">Ver motos</a>
+            </div>
+            <svg class="doodle doodle--arrow" viewBox="0 0 120 80"><path d="M6 10c30 2 60 14 78 40M84 50l-2-16M84 50l-15-4"/></svg>
+          </div>
+        </div>
+
+        <!-- Sello giratorio -->
+        <div class="seal" aria-hidden="true">
+          <svg viewBox="0 0 200 200">
+            <defs><path id="circle" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
+            <text><textPath href="#circle" textLength="448" lengthAdjust="spacing">envío gratis ✶ a todo el país ✶ </textPath></text>
+          </svg>
+          <svg class="seal__car" viewBox="0 0 48 48"><path d="M6 30v-6l6-8h18l8 8h4v6M10 30a4 4 0 108 0M30 30a4 4 0 108 0M18 30h12"/></svg>
+        </div>
+
+        <svg class="doodle doodle--star s1" viewBox="0 0 40 40"><path d="M20 3v34M3 20h34M8 8l24 24M32 8L8 32"/></svg>
+        <svg class="doodle doodle--star s2" viewBox="0 0 40 40"><path d="M20 3v34M3 20h34"/></svg>
+      </div>
+    </section>
+
+    <!-- Cinta de frases -->
+    <div class="ribbon" aria-hidden="true">
+      <div class="ribbon__track">
+        <span>pequeños conductores</span><b>✶</b><span>grandes aventuras</span><b>✶</b><span>control para papás</span><b>✶</b><span>envío gratis</span><b>✶</b>
+        <span>pequeños conductores</span><b>✶</b><span>grandes aventuras</span><b>✶</b><span>control para papás</span><b>✶</b><span>envío gratis</span><b>✶</b>
+      </div>
+    </div>
+
+    <!-- Categorías -->
+    <section class="section">
+      <div class="wrap">
+        <div class="cats">
+          <a class="cat" href="catalogo.html?tipo=carro">
+            <div class="cat__img ph arch bg-slate"><img src="assets/productos/recortes/can-am-maverick-1.webp" alt="Carros" /></div>
+            <div class="cat__txt"><h2 class="squiggle">carros</h2><span data-count="carro"></span></div>
+          </a>
+          <a class="cat" href="catalogo.html?tipo=moto">
+            <div class="cat__img ph arch bg-olive"><img src="assets/productos/recortes/scooter-dos-puestos-1389-1.webp" alt="Motos" /></div>
+            <div class="cat__txt"><h2 class="squiggle">motos</h2><span data-count="moto"></span></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Destacados -->
+    <section class="section section--sand wavy">
+      <div class="wrap">
+        <div class="head">
+          <h2 class="squiggle">los favoritos</h2>
+          <a class="link" href="catalogo.html">Ver todo el catálogo →</a>
+        </div>
+        <div class="grid" data-grid></div>
+      </div>
+    </section>
+
+    <!-- Manifiesto -->
+    <section class="section" id="nosotros">
+      <div class="wrap manifest">
+        <div class="stripes stripes--mustard manifest__stripes rough" aria-hidden="true"></div>
+        <div class="paper manifest__card lift">
+          <svg class="doodle doodle--heart" viewBox="0 0 48 48"><path d="M24 40S6 29 6 17a9 9 0 0118-3 9 9 0 0118 3c0 12-18 23-18 23z"/></svg>
+          <h2>jugar también es aprender.</h2>
+          <p>Cuando un niño maneja su propio carro aprende a decidir, a coordinar sus movimientos y a confiar en sí mismo. En Filü elegimos cada modelo pensando en eso: que sea seguro, resistente y que convierta cada paseo en una pequeña aventura para recordar.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Promesas -->
+    <section class="section section--tight">
+      <div class="wrap promises-box">
+        <div class="promises">
+          <div class="promise">
+            <span class="promise__icon"><svg viewBox="0 0 48 48"><rect x="12" y="8" width="24" height="34" rx="6"/><circle cx="19" cy="22" r="3"/><circle cx="29" cy="22" r="3"/><path d="M19 33h10M24 2v6"/></svg></span>
+            <h3>control para papás</h3>
+            <p>Guía el recorrido desde lejos mientras aprenden a manejar.</p>
+          </div>
+          <div class="promise">
+            <span class="promise__icon"><svg viewBox="0 0 48 48"><path d="M24 4l16 6v12c0 10-7 18-16 22C15 40 8 32 8 22V10z"/><path d="M17 24l5 5 9-10"/></svg></span>
+            <h3>seguridad primero</h3>
+            <p>Cinturón, velocidad limitada y estructuras resistentes.</p>
+          </div>
+          <div class="promise">
+            <span class="promise__icon"><svg viewBox="0 0 48 48"><path d="M4 14h26v20H4zM30 20h8l6 7v7H30"/><circle cx="12" cy="36" r="4"/><circle cx="36" cy="36" r="4"/></svg></span>
+            <h3>envío gratis</h3>
+            <p>Despachamos con Servientrega a todo el país.</p>
+          </div>
+          <div class="promise">
+            <span class="promise__icon"><svg viewBox="0 0 48 48"><path d="M8 10h32a4 4 0 014 4v16a4 4 0 01-4 4H22l-10 8v-8H8a4 4 0 01-4-4V14a4 4 0 014-4z"/><path d="M14 20h20M14 26h12"/></svg></span>
+            <h3>te acompañamos</h3>
+            <p>Te ayudamos por WhatsApp a elegir, armar y usar tu Filü.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Foto de estilo de vida -->
+    <section class="section section--tight">
+      <div class="wrap">
+        <div class="lifestyle">
+          <div class="lifestyle__photo stripes stripes--terra rough"></div>
+          <div class="paper lifestyle__card lift">
+            <p class="note note--static">Aquí va una foto horizontal grande de niños jugando con sus Filü (formato 3:2)</p>
+            <h2>cada paseo es una historia.</h2>
+            <a href="catalogo.html" class="btn btn--solid">Encuentra el suyo</a>
+          </div>
+          <svg class="doodle doodle--star s3" viewBox="0 0 40 40"><path d="M20 3v34M3 20h34M8 8l24 24M32 8L8 32"/></svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- Preguntas -->
+    <section class="section" id="preguntas">
+      <div class="wrap faq-wrap">
+        <h2 class="squiggle squiggle--center">preguntas frecuentes</h2>
+        <div class="faq">
+          <details><summary>¿Desde qué edad pueden usarlo?</summary><p>Tenemos modelos desde los 18 meses (con control remoto para papás) hasta los 8 años. En cada producto indicamos la edad recomendada y el peso máximo.</p></details>
+          <details><summary>¿El envío tiene costo?</summary><p>No. Despachamos con Servientrega a todo el país y el envío ya está incluido en el precio.</p></details>
+          <details><summary>¿Cómo puedo pagar?</summary><p>Con link de pago seguro (tarjeta de crédito a cuotas, débito, PSE o Nequi), o por transferencia, Nequi o Bre-B.</p></details>
+          <details><summary>¿Llega armado?</summary><p>Llega con manual de ensamble y te acompañamos por WhatsApp si necesitas ayuda.</p></details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer wavy wavy--slate">
+    <div class="wrap footer__grid">
+      <div>
+        <img src="assets/logo-filu.png" alt="Filü" class="footer__logo" />
+        <p>Carros y motos montables para pequeños aventureros.</p>
+      </div>
+      <div><h4>tienda</h4><a href="catalogo.html?tipo=carro">Carros</a><a href="catalogo.html?tipo=moto">Motos</a><a href="#preguntas">Preguntas</a></div>
+      <div><h4>contacto</h4><a data-wa href="#" target="_blank" rel="noopener">WhatsApp</a><a href="mailto:hola@filu.com">hola@filu.com</a></div>
+    </div>
+  </footer>
+
+  <script src="js/productos.js"></script>
+  <script>
+    const HEX = { azul:"#3a6fb5", rojo:"#c8372d", fucsia:"#d63a8a", rosado:"#f0a6c2", negro:"#2b2b2b", blanco:"#f6f2ea", blanca:"#f6f2ea",
+      gris:"#9a9ea3", "gris oscuro":"#5e6368", "gris claro":"#cdd0d2", verde:"#6ba43a", naranja:"#e8742a", arena:"#cdb48a", plateado:"#c3c7cb" };
+    const money = (n) => "$" + n.toLocaleString("es-CO");
+    // Color principal de la foto 1 de cada producto → fondo de marca que mejor contrasta
+    const FOTO1 = { "utv-809":"azul", "can-am-maverick":"arena", "hilux":"rojo", "todoterreno-22f":"rojo", "patrulla-6667":"blanco",
+      "camioneta-909":"gris", "buggy-1688":"rojo", "turbo-hsd-800":"rojo", "camioneta-5599":"fucsia", "deportivo-550":"rojo",
+      "rodeo-1155":"azul", "moto-aventura-188":"rojo", "moto-deportiva-dls01":"rojo", "scooter-dos-puestos-1389":"fucsia", "scooter-grande-1658":"fucsia" };
+    const FONDOS = { azul:["mustard","terra"], rojo:["slate","mustard"], fucsia:["olive","slate"], blanco:["terra","slate"], gris:["mustard","olive"], arena:["slate","olive"], negro:["mustard","terra"] };
+    const recorte = (f) => f.replace("assets/productos/", "assets/productos/recortes/").replace(".jpg", ".webp");
+    const used = {};
+    const fondo = (p) => { const c = FOTO1[p.id] || "negro"; used[c] = (used[c] || 0) + 1; const l = FONDOS[c]; return "bg-" + l[(used[c] - 1) % l.length]; };
+    const list = PRODUCTS.filter((p) => p.destacado).slice(0, 8);
+    document.querySelector("[data-grid]").innerHTML = list.map((p, i) => `
+      <a class="card" href="producto.html?id=${p.id}" style="--tilt:${[-1.2, .8, -.6, 1.1][i % 4]}deg">
+        <div class="card__img ph ${fondo(p)}"><img src="${recorte(p.fotos[0])}" alt="${p.nombre}" loading="lazy" />
+          ${p.etiqueta ? `<span class="tag">${p.etiqueta}</span>` : ""}</div>
+        <div class="card__body">
+          <div class="dots">${p.colores.map((c) => `<i title="${c}" style="background:${HEX[c.toLowerCase()] || "#ccc"}"></i>`).join("")}${p.colores.length ? `<small>${p.colores.length} ${p.colores.length === 1 ? "color" : "colores"}</small>` : ""}</div>
+          <h3>${p.nombre}</h3>
+          <p class="card__meta">${[p.edad, p.bateria].filter(Boolean).join(" · ")}</p>
+          <p class="card__price">${p.precio ? money(p.precio) : "Consultar precio"}</p>
+        </div>
+      </a>`).join("");
+    document.querySelectorAll("[data-count]").forEach((el) => {
+      const n = PRODUCTS.filter((p) => p.tipo === el.dataset.count).length;
+      el.textContent = `${n} modelos`;
+    });
+    document.querySelectorAll("[data-wa]").forEach((a) => a.href = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent("Hola Filü 👋")}`);
+  </script>
+</body>
+</html>
