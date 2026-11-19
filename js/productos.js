@@ -256,7 +256,7 @@ const PRODUCTS = [
     nombre: "Camioneta LED 909",
     tipo: "carro",
     subtipo: "Camioneta",
-    precio: null,
+    precio: 1100000,
     precioAntes: null,
     etiqueta: null,
     destacado: false,
