@@ -14,7 +14,8 @@
 //  destacado       → true para mostrarlo en la página de inicio
 //  edad, puestos, bateria → datos rápidos de la tarjeta (o null)
 //  colores         → lista de colores disponibles (o [])
-//  fotos           → fotos("<id>", cantidad)
+//  fotos           → fotos("<id>", cantidad). Las fotos de ambiente (con niños)
+//                    se llaman <id>-ambiente-N.jpg y se muestran completas, sin recortar.
 //  resumen         → frase corta
 //  descripcion     → lista de párrafos
 //  caracteristicas → lista de viñetas
@@ -131,7 +132,7 @@ const PRODUCTS = [
     puestos: null,
     bateria: "24V",
     colores: ["Blanco", "Negro", "Rojo", "Fucsia", "Gris", "Azul"],
-    fotos: fotos("hilux", 8),
+    fotos: [...fotos("hilux", 1), "assets/productos/hilux-ambiente-1.jpg", ...fotos("hilux", 8).slice(1)],
     resumen: "Camioneta con licencia oficial Toyota: batería 24V, 4 motores y pantalla de 7\".",
     descripcion: [
       "La Toyota Hilux con licencia oficial lleva la potencia de una camioneta real al tamaño de los más pequeños. Diseñada para pequeños pilotos que buscan emoción real.",

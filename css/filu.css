@@ -273,6 +273,11 @@ body.show-notes .note--static { display: inline-block; }
 .pd__main { aspect-ratio: 1 / 1; border-radius: 26px; box-shadow: var(--shadow); }
 .pd__main img { padding: 9%; }
 .ph--plain { background: var(--paper); }
+/* Fotos de ambiente (con niños): ocupan todo el recuadro, sin recorte ni sombra */
+.ph--photo img { object-fit: cover; padding: 0 !important; filter: none; }
+.hero__photo.ph--photo { display: block; overflow: hidden; }
+.hero__photo.ph--photo img { transition: transform .6s; }
+.hero__photo.ph--photo:hover img { transform: scale(1.03); }
 .ph--plain img { padding: 0 !important; filter: none; }
 .pd__main .tag { top: 18px; left: 18px; font-size: .85rem; }
 .pd__thumbs { display: flex; gap: .6rem; margin-top: 1rem; flex-wrap: wrap; }
