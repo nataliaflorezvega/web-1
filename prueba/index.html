@@ -87,11 +87,11 @@
       <div class="wrap">
         <div class="cats">
           <a class="cat" href="catalogo.html?tipo=carro">
-            <div class="cat__img ph arch"><img src="assets/productos/can-am-maverick-1.jpg" alt="Carros" /></div>
+            <div class="cat__img ph arch bg-slate"><img src="assets/productos/can-am-maverick-1.jpg" alt="Carros" /></div>
             <div class="cat__txt"><h2 class="squiggle">carros</h2><span data-count="carro"></span></div>
           </a>
           <a class="cat" href="catalogo.html?tipo=moto">
-            <div class="cat__img ph ph--olive arch"><img src="assets/productos/scooter-dos-puestos-1389-1.jpg" alt="Motos" /></div>
+            <div class="cat__img ph arch bg-olive"><img src="assets/productos/scooter-dos-puestos-1389-1.jpg" alt="Motos" /></div>
             <div class="cat__txt"><h2 class="squiggle">motos</h2><span data-count="moto"></span></div>
           </a>
         </div>
@@ -194,10 +194,17 @@
     const HEX = { azul:"#3a6fb5", rojo:"#c8372d", fucsia:"#d63a8a", rosado:"#f0a6c2", negro:"#2b2b2b", blanco:"#f6f2ea", blanca:"#f6f2ea",
       gris:"#9a9ea3", "gris oscuro":"#5e6368", "gris claro":"#cdd0d2", verde:"#6ba43a", naranja:"#e8742a", arena:"#cdb48a", plateado:"#c3c7cb" };
     const money = (n) => "$" + n.toLocaleString("es-CO");
+    // Color principal de la foto 1 de cada producto → fondo de marca que mejor contrasta
+    const FOTO1 = { "utv-809":"azul", "can-am-maverick":"arena", "hilux":"rojo", "todoterreno-22f":"rojo", "patrulla-6667":"blanco",
+      "camioneta-909":"gris", "buggy-1688":"rojo", "turbo-hsd-800":"rojo", "camioneta-5599":"fucsia", "deportivo-550":"rojo",
+      "rodeo-1155":"azul", "moto-aventura-188":"rojo", "moto-deportiva-dls01":"rojo", "scooter-dos-puestos-1389":"fucsia", "scooter-grande-1658":"fucsia" };
+    const FONDOS = { azul:["mustard","terra"], rojo:["slate","mustard"], fucsia:["olive","slate"], blanco:["terra","slate"], gris:["mustard","olive"], arena:["slate","olive"], negro:["mustard","terra"] };
+    const used = {};
+    const fondo = (p) => { const c = FOTO1[p.id] || "negro"; used[c] = (used[c] || 0) + 1; const l = FONDOS[c]; return "bg-" + l[(used[c] - 1) % l.length]; };
     const list = PRODUCTS.filter((p) => p.destacado).slice(0, 8);
     document.querySelector("[data-grid]").innerHTML = list.map((p, i) => `
       <a class="card" href="producto.html?id=${p.id}" style="--tilt:${[-1.2, .8, -.6, 1.1][i % 4]}deg">
-        <div class="card__img ph"><img src="${p.fotos[0]}" alt="${p.nombre}" loading="lazy" />
+        <div class="card__img ph ${fondo(p)}"><img src="${p.fotos[0]}" alt="${p.nombre}" loading="lazy" />
           ${p.etiqueta ? `<span class="tag">${p.etiqueta}</span>` : ""}</div>
         <div class="card__body">
           <div class="dots">${p.colores.map((c) => `<i title="${c}" style="background:${HEX[c.toLowerCase()] || "#ccc"}"></i>`).join("")}</div>
