@@ -42,7 +42,7 @@
     <section class="hero">
       <div class="wrap hero__grid">
         <figure class="hero__photo ph">
-          <img src="assets/productos/can-am-maverick-2.jpg" alt="Can-Am Maverick 4x4" />
+          <img src="assets/productos/recortes/can-am-maverick-2.webp" alt="Can-Am Maverick 4x4" />
           <figcaption class="note">Aquí va tu foto principal de estilo de vida (un niño manejando su Filü)</figcaption>
         </figure>
 
@@ -87,11 +87,11 @@
       <div class="wrap">
         <div class="cats">
           <a class="cat" href="catalogo.html?tipo=carro">
-            <div class="cat__img ph arch bg-slate"><img src="assets/productos/can-am-maverick-1.jpg" alt="Carros" /></div>
+            <div class="cat__img ph arch bg-slate"><img src="assets/productos/recortes/can-am-maverick-1.webp" alt="Carros" /></div>
             <div class="cat__txt"><h2 class="squiggle">carros</h2><span data-count="carro"></span></div>
           </a>
           <a class="cat" href="catalogo.html?tipo=moto">
-            <div class="cat__img ph arch bg-olive"><img src="assets/productos/scooter-dos-puestos-1389-1.jpg" alt="Motos" /></div>
+            <div class="cat__img ph arch bg-olive"><img src="assets/productos/recortes/scooter-dos-puestos-1389-1.webp" alt="Motos" /></div>
             <div class="cat__txt"><h2 class="squiggle">motos</h2><span data-count="moto"></span></div>
           </a>
         </div>
@@ -199,12 +199,13 @@
       "camioneta-909":"gris", "buggy-1688":"rojo", "turbo-hsd-800":"rojo", "camioneta-5599":"fucsia", "deportivo-550":"rojo",
       "rodeo-1155":"azul", "moto-aventura-188":"rojo", "moto-deportiva-dls01":"rojo", "scooter-dos-puestos-1389":"fucsia", "scooter-grande-1658":"fucsia" };
     const FONDOS = { azul:["mustard","terra"], rojo:["slate","mustard"], fucsia:["olive","slate"], blanco:["terra","slate"], gris:["mustard","olive"], arena:["slate","olive"], negro:["mustard","terra"] };
+    const recorte = (f) => f.replace("assets/productos/", "assets/productos/recortes/").replace(".jpg", ".webp");
     const used = {};
     const fondo = (p) => { const c = FOTO1[p.id] || "negro"; used[c] = (used[c] || 0) + 1; const l = FONDOS[c]; return "bg-" + l[(used[c] - 1) % l.length]; };
     const list = PRODUCTS.filter((p) => p.destacado).slice(0, 8);
     document.querySelector("[data-grid]").innerHTML = list.map((p, i) => `
       <a class="card" href="producto.html?id=${p.id}" style="--tilt:${[-1.2, .8, -.6, 1.1][i % 4]}deg">
-        <div class="card__img ph ${fondo(p)}"><img src="${p.fotos[0]}" alt="${p.nombre}" loading="lazy" />
+        <div class="card__img ph ${fondo(p)}"><img src="${recorte(p.fotos[0])}" alt="${p.nombre}" loading="lazy" />
           ${p.etiqueta ? `<span class="tag">${p.etiqueta}</span>` : ""}</div>
         <div class="card__body">
           <div class="dots">${p.colores.map((c) => `<i title="${c}" style="background:${HEX[c.toLowerCase()] || "#ccc"}"></i>`).join("")}</div>
