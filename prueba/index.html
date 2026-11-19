@@ -42,7 +42,7 @@
     <section class="hero">
       <div class="wrap hero__grid">
         <figure class="hero__photo ph">
-          <img src="assets/productos/recortes/can-am-maverick-2.webp" alt="Can-Am Maverick 4x4" />
+          <img src="assets/productos/recortes/rodeo-1155-1.webp" alt="Rodeo 1155 4x4 Grande" />
           <figcaption class="note">Aquí va tu foto principal de estilo de vida (un niño manejando su Filü)</figcaption>
         </figure>
 
@@ -64,7 +64,7 @@
         <div class="seal" aria-hidden="true">
           <svg viewBox="0 0 200 200">
             <defs><path id="circle" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
-            <text><textPath href="#circle">envío gratis · a todo el país · envío gratis · a todo el país ·</textPath></text>
+            <text><textPath href="#circle" textLength="448" lengthAdjust="spacing">envío gratis ✶ a todo el país ✶ </textPath></text>
           </svg>
           <svg class="seal__car" viewBox="0 0 48 48"><path d="M6 30v-6l6-8h18l8 8h4v6M10 30a4 4 0 108 0M30 30a4 4 0 108 0M18 30h12"/></svg>
         </div>
@@ -208,7 +208,7 @@
         <div class="card__img ph ${fondo(p)}"><img src="${recorte(p.fotos[0])}" alt="${p.nombre}" loading="lazy" />
           ${p.etiqueta ? `<span class="tag">${p.etiqueta}</span>` : ""}</div>
         <div class="card__body">
-          <div class="dots">${p.colores.map((c) => `<i title="${c}" style="background:${HEX[c.toLowerCase()] || "#ccc"}"></i>`).join("")}</div>
+          <div class="dots">${p.colores.map((c) => `<i title="${c}" style="background:${HEX[c.toLowerCase()] || "#ccc"}"></i>`).join("")}${p.colores.length ? `<small>${p.colores.length} ${p.colores.length === 1 ? "color" : "colores"}</small>` : ""}</div>
           <h3>${p.nombre}</h3>
           <p class="card__meta">${[p.edad, p.bateria].filter(Boolean).join(" · ")}</p>
           <p class="card__price">${p.precio ? money(p.precio) : "Consultar precio"}</p>
