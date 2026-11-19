@@ -25,7 +25,9 @@ const FLYERS = new Set(["can-am-maverick-6", "hilux-8", "turbo-hsd-800-11", "mot
 const photoName = (f) => f.split("/").pop().replace(/\.\w+$/, "");
 const isFlyer = (f) => FLYERS.has(photoName(f));
 // Versión recortada (fondo transparente) de cada foto
-const recorte = (f) => (isFlyer(f) ? f : `assets/productos/recortes/${photoName(f)}.webp`);
+// Fotos de ambiente (niños usando el carro): se muestran completas, sin recorte
+const isAmbiente = (f) => /-ambiente-\d+$/.test(photoName(f));
+const recorte = (f) => (isFlyer(f) || isAmbiente(f) ? f : `assets/productos/recortes/${photoName(f)}.webp`);
 
 // Fondo de marca según el color del carro de la foto principal, para que siempre contraste
 const FOTO1 = {
@@ -127,7 +129,7 @@ if (detail) {
   } else {
     document.title = `${p.nombre} · Filü`;
     const fondo = fondoDe(p);
-    const phClass = (f) => (isFlyer(f) ? "ph ph--plain" : `ph ${fondo}`);
+    const phClass = (f) => (isAmbiente(f) ? "ph ph--photo" : isFlyer(f) ? "ph ph--plain" : `ph ${fondo}`);
     const velocidad = p.especificaciones.find(([k]) => /velocidad/i.test(k));
     const chips = [p.edad && `🧒 ${p.edad}`, p.bateria && `🔋 ${p.bateria}`, p.puestos && `💺 ${p.puestos}`, velocidad && `⚡ ${velocidad[1]}`].filter(Boolean);
     const price = p.precio
