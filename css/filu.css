@@ -168,9 +168,9 @@ body.show-notes .note--static { display: inline-block; }
 .promise p { margin: 0; color: var(--ink); opacity: .8; }
 
 /* Estilo de vida */
-.lifestyle { position: relative; min-height: 440px; }
-.lifestyle__photo { position: absolute; inset: 0; border-radius: 26px; }
-.lifestyle__card { position: absolute; left: 6%; bottom: -30px; padding: 2rem 2.4rem; max-width: 460px; transform: rotate(-1.5deg); }
+.lifestyle { position: relative; margin-bottom: 110px; }
+.lifestyle__photo { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 26px; box-shadow: var(--shadow); }
+.lifestyle__card { position: absolute; left: 5%; bottom: -100px; padding: 1.8rem 2.4rem; max-width: 440px; transform: rotate(-1.5deg); }
 .lifestyle__card h2 { font-size: 2.4rem; }
 .s3 { right: 6%; top: -14px; width: 38px; stroke: var(--terra); }
 
@@ -218,8 +218,9 @@ body.show-notes .note--static { display: inline-block; }
   .card { padding: 7px 7px 12px; }
   .promises-box { padding: 2rem 1.4rem; }
   .footer__grid { grid-template-columns: 1fr; }
-  .lifestyle { min-height: 380px; }
-  .lifestyle__card { left: 12px; right: 12px; padding: 1.6rem; }
+  .lifestyle { margin-bottom: 0; }
+  .lifestyle__photo { aspect-ratio: 4 / 3; object-position: 60% 50%; }
+  .lifestyle__card { position: relative; left: auto; bottom: auto; margin: -36px 12px 0; padding: 1.6rem; }
   .section { padding: 3.4rem 0; }
 }
 @media (prefers-reduced-motion: reduce) {

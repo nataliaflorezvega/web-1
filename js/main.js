@@ -68,6 +68,21 @@ function productCard(p, i = 0) {
     </a>`;
 }
 
+// ---------- Portada de temporada ----------
+// Del 1 de diciembre al 6 de enero se muestra la foto de Navidad.
+// Para verla cualquier día: agregar ?navidad a la dirección.
+const hero = $("[data-hero]");
+if (hero) {
+  const hoy = new Date();
+  const esNavidad = hoy.getMonth() === 11 || (hoy.getMonth() === 0 && hoy.getDate() <= 6) || new URLSearchParams(location.search).has("navidad");
+  if (esNavidad) {
+    hero.href = "producto.html?id=rodeo-1155";
+    const img = $("img", hero);
+    img.src = "assets/ambiente/portada-navidad.webp";
+    img.alt = "Niño descubriendo un Rodeo 1155 rojo con un moño junto al árbol de Navidad";
+  }
+}
+
 // ---------- Inicio ----------
 const featured = $("[data-featured]");
 if (featured) {
