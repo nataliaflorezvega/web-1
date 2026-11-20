@@ -510,6 +510,52 @@ const PRODUCTS = [
     ],
   },
 
+  // ---------------------------------------------------------------- 7. Carro B-868
+  {
+    id: "barra-running-b868",
+    nombre: "Todoterreno Barra Running B-868",
+    tipo: "carro",
+    subtipo: "Camioneta",
+    precio: 1495000,
+    precioAntes: null,
+    etiqueta: "Nuevo",
+    destacado: false,
+    edad: "1 a 6 años",
+    puestos: null,
+    bateria: "12V 7Ah",
+    colores: ["Gris", "Negro", "Fucsia", "Rojo"],
+    fotos: fotos("barra-running-b868", 6),
+    resumen: "Todoterreno 4x4 con barra de luces LED en el techo, pintura metalizada y control por app.",
+    descripcion: [
+      "Aventura sin límites. El Todoterreno Barra Running B-868 tiene un diseño robusto de 4x4, con barra de luces LED en el techo, llantas de goma grandes y pintura metalizada que lo hacen ver como un verdadero carro de aventura.",
+      "Con 4 motores y batería de 12V 7Ah, se maneja de forma independiente con el pedal, o los papás pueden tomar el control con el control remoto o desde la app del celular. Tiene llave de encendido, puertas abatibles, Bluetooth y música para que cada paseo sea una fiesta.",
+    ],
+    caracteristicas: [
+      "Batería 12V 7Ah",
+      "4 motores (4 × 380)",
+      "Llantas en goma",
+      "Asiento de cuero acolchado",
+      "Barra de luces LED en el techo",
+      "Bluetooth, música incorporada, entrada USB y cable AUX",
+      "Control remoto para padres y app para el celular",
+      "Puertas abatibles",
+      "Llave de encendido",
+      "Indicador de batería",
+      "Pintura metalizada",
+    ],
+    especificaciones: [
+      ["Modelo", "B-868"],
+      ["Batería", "12V 7Ah"],
+      ["Motores", "4 × 380"],
+      ["Velocidad máxima", "10 km/h"],
+      ["Tipos de control", "Pedal independiente, control remoto, app para el celular"],
+      ["Peso máximo soportado", "45 kg"],
+      ["Dimensiones del carro", "122 × 84 × 87 cm (largo × ancho × alto)"],
+      ["Edad recomendada", "1 a 6 años"],
+      ["Incluye manual de ensamblado", "Sí"],
+    ],
+  },
+
   // ================================================================ MOTOS
 
   // ---------------------------------------------------------------- 1. Moto 188
