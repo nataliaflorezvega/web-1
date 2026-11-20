@@ -21,7 +21,7 @@ const hex = (c) => HEX[c.toLowerCase()] || "#ccc";
 
 // ---------- Fotos ----------
 // Folletos del proveedor: se muestran tal cual (no tienen recorte)
-const FLYERS = new Set(["can-am-maverick-6", "hilux-8", "turbo-hsd-800-11", "moto-aventura-188-5", "moto-deportiva-dls01-5", "scooter-dos-puestos-1389-11", "scooter-grande-1658-8"]);
+const FLYERS = new Set(["barra-running-b868-6", "can-am-maverick-6", "hilux-8", "turbo-hsd-800-11", "moto-aventura-188-5", "moto-deportiva-dls01-5", "scooter-dos-puestos-1389-11", "scooter-grande-1658-8"]);
 const photoName = (f) => f.split("/").pop().replace(/\.\w+$/, "");
 const isFlyer = (f) => FLYERS.has(photoName(f));
 // Versión recortada (fondo transparente) de cada foto
@@ -33,7 +33,7 @@ const recorte = (f) => (isFlyer(f) || isAmbiente(f) ? f : `assets/productos/reco
 const FOTO1 = {
   "utv-809": "azul", "can-am-maverick": "arena", hilux: "rojo", "todoterreno-22f": "rojo", "patrulla-6667": "blanco",
   "camioneta-909": "gris", "buggy-1688": "rojo", "turbo-hsd-800": "rojo", "camioneta-5599": "fucsia", "deportivo-550": "rojo",
-  "rodeo-1155": "azul", "moto-aventura-188": "rojo", "moto-deportiva-dls01": "rojo", "scooter-dos-puestos-1389": "fucsia", "scooter-grande-1658": "fucsia",
+  "rodeo-1155": "azul", "barra-running-b868": "gris", "moto-aventura-188": "rojo", "moto-deportiva-dls01": "rojo", "scooter-dos-puestos-1389": "fucsia", "scooter-grande-1658": "fucsia",
 };
 const FONDOS = { azul: ["mustard", "terra"], rojo: ["slate", "mustard"], fucsia: ["olive", "slate"], rosado: ["olive", "slate"], blanco: ["terra", "slate"], blanca: ["terra", "slate"], gris: ["mustard", "olive"], arena: ["slate", "olive"], negro: ["mustard", "terra"], verde: ["terra", "mustard"], naranja: ["slate", "olive"] };
 const colorFoto = (p) => (FOTO1[p.id] || p.colores[0] || "negro").toLowerCase();
