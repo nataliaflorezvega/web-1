@@ -36,8 +36,8 @@ body::after { content: ""; position: fixed; inset: 0; pointer-events: none; z-in
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; color: var(--terra); line-height: 1.05; margin: 0 0 .4em; letter-spacing: -.02em; font-optical-sizing: auto; }
-/* Textos sobre las rayas pintadas: letra dibujada a mano */
-.hero__title h1, .page-head__box h1 { font-family: var(--hand); font-weight: 800; letter-spacing: -.01em; }
+/* Frases de marca (sobre las rayas y tarjetas de frase): letra dibujada a mano */
+.hero__title h1, .page-head__box h1, .manifest__card h2, .lifestyle__card h2 { font-family: var(--hand); font-weight: 800; letter-spacing: -.01em; }
 .wrap { width: min(1180px, 100% - 32px); margin-inline: auto; }
 
 /* Rayas pintadas a mano */
