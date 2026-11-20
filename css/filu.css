@@ -116,7 +116,7 @@ body.show-notes .note--static { display: inline-block; }
 
 /* Cinta de frases */
 .ribbon { background: var(--terra); color: var(--cream); overflow: hidden; transform: rotate(-1.2deg); margin: 0 -10px; box-shadow: var(--shadow); position: relative; z-index: 2; }
-.ribbon__track { display: flex; align-items: center; gap: 1.6rem; width: max-content; padding: .8rem 0; animation: marquee 30s linear infinite; font-family: var(--serif); font-weight: 600; font-style: italic; font-size: 1.35rem; }
+.ribbon__track { display: flex; align-items: center; gap: 1.6rem; width: max-content; padding: .8rem 0; animation: marquee 30s linear infinite; font-family: var(--serif); font-weight: 700; font-style: italic; font-size: 1.6rem; letter-spacing: -.01em; }
 .ribbon b { color: var(--mustard); font-weight: 400; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
@@ -127,7 +127,7 @@ body.show-notes .note--static { display: inline-block; }
 .wavy::before { content: ""; position: absolute; left: 0; right: 0; top: -22px; height: 24px; background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 24' preserveAspectRatio='none'><path d='M0 24 V12 C 20 0, 40 0, 60 12 S 100 24, 120 12 V24 Z' fill='%23f1e6d2'/></svg>") repeat-x 0 0 / 120px 24px; }
 .wavy--slate::before { background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 24' preserveAspectRatio='none'><path d='M0 24 V12 C 20 0, 40 0, 60 12 S 100 24, 120 12 V24 Z' fill='%23475b66'/></svg>"); }
 .head { display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; margin-bottom: 2.2rem; flex-wrap: wrap; }
-.head h2 { font-size: clamp(2rem, 4vw, 2.8rem); margin: 0; }
+.head h2 { font-size: clamp(2.3rem, 4.6vw, 3.3rem); margin: 0; }
 
 /* Categorías */
 .cats { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
@@ -136,7 +136,7 @@ body.show-notes .note--static { display: inline-block; }
 .cat__img img { padding: 8%; transition: transform .5s; }
 .cat:hover .cat__img img { transform: scale(1.05) rotate(-1deg); }
 .cat__txt { display: flex; justify-content: space-between; align-items: baseline; padding: 1.1rem .4rem 0; }
-.cat__txt h2 { font-size: 2.3rem; margin: 0; }
+.cat__txt h2 { font-size: 2.7rem; margin: 0; }
 .cat__txt span { color: var(--muted); font-weight: 700; }
 
 /* Tarjetas de producto */
@@ -159,7 +159,7 @@ body.show-notes .note--static { display: inline-block; }
 .manifest { position: relative; display: grid; grid-template-columns: 1fr 1fr; align-items: center; }
 .manifest__stripes { height: 420px; border-radius: 4px; }
 .manifest__card { margin-left: -18%; padding: 3rem; transform: rotate(-1deg); }
-.manifest__card h2 { font-size: clamp(2rem, 3.6vw, 2.8rem); color: var(--ink); }
+.manifest__card h2 { font-size: clamp(2.3rem, 4vw, 3.2rem); color: var(--ink); }
 .manifest__card p { margin: 0; font-size: 1.08rem; }
 
 /* Promesas */
@@ -174,12 +174,12 @@ body.show-notes .note--static { display: inline-block; }
 .lifestyle { position: relative; margin-bottom: 110px; }
 .lifestyle__photo { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-radius: 26px; box-shadow: var(--shadow); }
 .lifestyle__card { position: absolute; left: 5%; bottom: -100px; padding: 1.8rem 2.4rem; max-width: 440px; transform: rotate(-1.5deg); }
-.lifestyle__card h2 { font-size: 2.4rem; }
+.lifestyle__card h2 { font-size: 2.8rem; }
 .s3 { right: 6%; top: -14px; width: 38px; stroke: var(--terra); }
 
 /* Preguntas */
 .faq-wrap { max-width: 760px; padding-top: 2rem; }
-.faq-wrap > h2 { font-size: clamp(2rem, 4vw, 2.6rem); margin-bottom: 1.8rem; }
+.faq-wrap > h2 { font-size: clamp(2.3rem, 4.6vw, 3.1rem); margin-bottom: 1.8rem; }
 .faq details { background: var(--paper); border-radius: 16px; padding: 1.1rem 1.4rem; margin-bottom: .8rem; box-shadow: 0 6px 16px -10px rgba(90, 60, 30, .35); }
 .faq summary { cursor: pointer; list-style: none; display: flex; justify-content: space-between; font-weight: 700; color: var(--slate); font-size: 1.05rem; }
 .faq summary::-webkit-details-marker { display: none; }
@@ -310,7 +310,7 @@ body.show-notes .note--static { display: inline-block; }
 .pd__trust { list-style: none; padding: 1.2rem 0 0; margin: 1.6rem 0 0; border-top: 2px dashed var(--sand-2); display: grid; gap: .5rem; font-weight: 700; color: var(--slate); }
 .pd__more { display: grid; grid-template-columns: 1.2fr 1fr; gap: 2rem; padding-bottom: 4.5rem; align-items: start; }
 .pd__block { background-color: var(--paper); padding: 2rem 2.2rem; border-radius: 22px; box-shadow: var(--shadow); }
-.pd__block h2 { font-size: 2rem; }
+.pd__block h2 { font-size: 2.3rem; }
 .pd__block h3 { font-size: 1.4rem; color: var(--slate); margin-top: 1.5rem; }
 .checks { list-style: none; padding: 0; margin: 0; display: grid; gap: .5rem; }
 .checks li { position: relative; padding-left: 1.9rem; }
