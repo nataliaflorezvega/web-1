@@ -101,7 +101,7 @@ if (catalog) {
   const state = { tipo: params.get("tipo") || "todos", q: params.get("q") || "", orden: "destacados" };
   const box = $("[data-catalog-search]");
   box.value = state.q;
-  const titulos = { carro: "carros", moto: "motos", todos: "todo el catálogo" };
+  const titulos = { carro: "Carros", moto: "Motos", todos: "Todo el catálogo" };
   const subtitulos = {
     carro: "Camionetas, UTV, buggies y deportivos para niños de 1 a 8 años",
     moto: "Motos y scooters para pequeños motociclistas",
@@ -140,7 +140,7 @@ const detail = $("[data-product-detail]");
 if (detail) {
   const p = findProduct(new URLSearchParams(location.search).get("id"));
   if (!p) {
-    detail.innerHTML = `<div class="wrap not-found"><p style="font-size:3rem;margin:0">🙈</p><h1>no encontramos este carrito</h1><a class="btn btn--solid" href="catalogo.html">Ver catálogo</a></div>`;
+    detail.innerHTML = `<div class="wrap not-found"><p style="font-size:3rem;margin:0">🙈</p><h1>No encontramos este carrito</h1><a class="btn btn--solid" href="catalogo.html">Ver catálogo</a></div>`;
   } else {
     document.title = `${p.nombre} · Filü`;
     const fondo = fondoDe(p);
@@ -187,12 +187,12 @@ if (detail) {
       </section>
       <section class="wrap pd__more">
         <div class="pd__block">
-          <h2 class="squiggle">descripción</h2>
+          <h2 class="squiggle">Descripción</h2>
           ${p.descripcion.map((t) => `<p>${esc(t)}</p>`).join("")}
-          ${p.caracteristicas.length ? `<h3>características</h3><ul class="checks">${p.caracteristicas.map((c) => `<li>${esc(c)}</li>`).join("")}</ul>` : ""}
+          ${p.caracteristicas.length ? `<h3>Características</h3><ul class="checks">${p.caracteristicas.map((c) => `<li>${esc(c)}</li>`).join("")}</ul>` : ""}
         </div>
         <div class="pd__block">
-          <h2 class="squiggle">especificaciones</h2>
+          <h2 class="squiggle">Especificaciones</h2>
           <table class="specs">${p.especificaciones.map(([k, v]) => `<tr><th>${esc(k)}</th><td>${esc(v)}</td></tr>`).join("")}</table>
         </div>
       </section>`;

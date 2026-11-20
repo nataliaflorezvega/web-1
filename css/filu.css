@@ -36,8 +36,8 @@ body::after { content: ""; position: fixed; inset: 0; pointer-events: none; z-in
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 h1, h2, h3, h4 { font-family: var(--serif); font-weight: 600; color: var(--terra); line-height: 1.05; margin: 0 0 .4em; letter-spacing: -.02em; font-optical-sizing: auto; }
-/* Textos sobre las rayas pintadas: letra dibujada a mano */
-.hero__title h1, .page-head__box h1 { font-family: var(--hand); font-weight: 800; letter-spacing: -.01em; }
+/* Frases de marca (sobre las rayas y tarjetas de frase): letra dibujada a mano */
+.hero__title h1, .page-head__box h1, .manifest__card h2, .lifestyle__card h2 { font-family: var(--hand); font-weight: 800; letter-spacing: -.01em; }
 .wrap { width: min(1180px, 100% - 32px); margin-inline: auto; }
 
 /* Rayas pintadas a mano */
@@ -116,7 +116,7 @@ body.show-notes .note--static { display: inline-block; }
 
 /* Cinta de frases */
 .ribbon { background: var(--terra); color: var(--cream); overflow: hidden; transform: rotate(-1.2deg); margin: 0 -10px; box-shadow: var(--shadow); position: relative; z-index: 2; }
-.ribbon__track { display: flex; align-items: center; gap: 1.6rem; width: max-content; padding: .8rem 0; animation: marquee 30s linear infinite; font-family: var(--serif); font-weight: 700; font-style: italic; font-size: 1.6rem; letter-spacing: -.01em; }
+.ribbon__track { display: flex; align-items: center; gap: 1.6rem; width: max-content; padding: 1rem 0; animation: marquee 30s linear infinite; font-family: var(--body); font-weight: 800; font-size: 1rem; letter-spacing: .14em; text-transform: uppercase; }
 .ribbon b { color: var(--mustard); font-weight: 400; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
