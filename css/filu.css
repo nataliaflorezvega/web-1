@@ -116,7 +116,7 @@ body.show-notes .note--static { display: inline-block; }
 
 /* Cinta de frases */
 .ribbon { background: var(--terra); color: var(--cream); overflow: hidden; transform: rotate(-1.2deg); margin: 0 -10px; box-shadow: var(--shadow); position: relative; z-index: 2; }
-.ribbon__track { display: flex; align-items: center; gap: 1.6rem; width: max-content; padding: .8rem 0; animation: marquee 30s linear infinite; font-family: var(--serif); font-weight: 700; font-style: italic; font-size: 1.6rem; letter-spacing: -.01em; }
+.ribbon__track { display: flex; align-items: center; gap: 1.6rem; width: max-content; padding: 1rem 0; animation: marquee 30s linear infinite; font-family: var(--body); font-weight: 800; font-size: 1rem; letter-spacing: .14em; text-transform: uppercase; }
 .ribbon b { color: var(--mustard); font-weight: 400; }
 @keyframes marquee { to { transform: translateX(-50%); } }
 
